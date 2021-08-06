@@ -1,6 +1,7 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_profile/responsive.dart';
+import 'dart:js' as js;
 
 import '../../../constants.dart';
 
@@ -17,7 +18,7 @@ class HomeBanner extends StatelessWidget {
         fit: StackFit.expand,
         children: [
           Image.asset(
-            "assets/images/bg.jpeg",
+            "assets/images/moi.jpg",
             fit: BoxFit.cover,
           ),
           Container(color: darkColor.withOpacity(0.66)),
@@ -45,7 +46,9 @@ class HomeBanner extends StatelessWidget {
                 SizedBox(height: defaultPadding),
                 if (!Responsive.isMobileLarge(context))
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      js.context.callMethod('open', ['mailto:contact@moisegui.com']);
+                    },
                     style: TextButton.styleFrom(
                       padding: EdgeInsets.symmetric(
                           horizontal: defaultPadding * 2,

@@ -38,6 +38,10 @@ class SideMenu extends StatelessWidget {
                       title: "Age",
                       text: "24",
                     ),
+                    AreaInfoText(
+                      title: "Contact",
+                      text: "contact@moisegui.com",
+                    ),
                     Skills(),
                     SizedBox(height: defaultPadding),
                     Coding(),

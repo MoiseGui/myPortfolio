@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_profile/models/Recommendation.dart';
-import 'package:flutter_profile/screens/home/components/recommendation_card.dart';
+import 'package:moise_gui/models/Recommendation.dart';
+import 'package:moise_gui/screens/home/components/recommendation_card.dart';
 
 import '../../../constants.dart';
 
@@ -40,4 +40,3 @@ class Recommendations extends StatelessWidget {
     );
   }
 }
-

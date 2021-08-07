@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_profile/constants.dart';
+import 'package:moise_gui/constants.dart';
 import 'package:flutter_svg/svg.dart';
 import 'dart:js' as js;
 
@@ -76,19 +76,22 @@ class SideMenu extends StatelessWidget {
                           Spacer(),
                           IconButton(
                             onPressed: () {
-                              js.context.callMethod('open', ['https://www.linkedin.com/in/moise-gui/']);
+                              js.context.callMethod('open',
+                                  ['https://www.linkedin.com/in/moise-gui/']);
                             },
                             icon: SvgPicture.asset("assets/icons/linkedin.svg"),
                           ),
                           IconButton(
                             onPressed: () {
-                              js.context.callMethod('open', ['https://github.com/MoiseGui']);
+                              js.context.callMethod(
+                                  'open', ['https://github.com/MoiseGui']);
                             },
                             icon: SvgPicture.asset("assets/icons/github.svg"),
                           ),
                           IconButton(
                             onPressed: () {
-                              js.context.callMethod('open', ['https://twitter.com/gui_moise']);
+                              js.context.callMethod(
+                                  'open', ['https://twitter.com/gui_moise']);
                             },
                             icon: SvgPicture.asset("assets/icons/twitter.svg"),
                           ),

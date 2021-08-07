@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_profile/models/Project.dart';
-import 'package:flutter_profile/responsive.dart';
+import 'package:moise_gui/models/Project.dart';
+import 'package:moise_gui/responsive.dart';
 
 import '../../../constants.dart';
 import 'project_card.dart';
@@ -47,7 +47,7 @@ class ProjectsGridView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
-        shrinkWrap: true,
+      shrinkWrap: true,
       physics: NeverScrollableScrollPhysics(),
       itemCount: demo_projects.length,
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(

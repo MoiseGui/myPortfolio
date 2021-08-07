@@ -1,6 +1,6 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_profile/responsive.dart';
+import 'package:moise_gui/responsive.dart';
 import 'dart:js' as js;
 
 import '../../../constants.dart';
@@ -47,7 +47,8 @@ class HomeBanner extends StatelessWidget {
                 if (!Responsive.isMobileLarge(context))
                   ElevatedButton(
                     onPressed: () {
-                      js.context.callMethod('open', ['mailto:contact@moisegui.com']);
+                      js.context
+                          .callMethod('open', ['mailto:contact@moisegui.com']);
                     },
                     style: TextButton.styleFrom(
                       padding: EdgeInsets.symmetric(

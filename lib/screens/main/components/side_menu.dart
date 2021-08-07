@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:moise_gui/constants.dart';
 import 'package:flutter_svg/svg.dart';
-import 'dart:js' as js;
+//import 'dart:js' as js;
+import '../../../utils/openUrl.dart';
 
 import 'area_info_text.dart';
 import 'coding.dart';
@@ -41,6 +42,7 @@ class SideMenu extends StatelessWidget {
                     AreaInfoText(
                       title: "Contact",
                       text: "contact@moisegui.com",
+                      clickable: true,
                     ),
                     Skills(),
                     SizedBox(height: defaultPadding),
@@ -53,15 +55,20 @@ class SideMenu extends StatelessWidget {
                       child: FittedBox(
                         child: Row(
                           children: [
-                            Text(
-                              "DOWNLOAD CV",
-                              style: TextStyle(
-                                color: Theme.of(context)
-                                    .textTheme
-                                    .bodyText1!
-                                    .color,
+                            new GestureDetector(
+                              onTap: () {
+                                openUrl('https://drive.google.com/file/d/1WY6j8YPftLLGh70kAQi_c68NQLwLCt86/view?usp=sharing');
+                              },
+                              child: Text(
+                                "DOWNLOAD CV",
+                                style: TextStyle(
+                                  color: Theme.of(context)
+                                      .textTheme
+                                      .bodyText1!
+                                      .color,
+                                ),
                               ),
-                            ),
+                      ),
                             SizedBox(width: defaultPadding / 2),
                             SvgPicture.asset("assets/icons/download.svg")
                           ],
@@ -76,22 +83,25 @@ class SideMenu extends StatelessWidget {
                           Spacer(),
                           IconButton(
                             onPressed: () {
-                              js.context.callMethod('open',
-                                  ['https://www.linkedin.com/in/moise-gui/']);
+//                              js.context.callMethod('open',
+//                                  ['https://www.linkedin.com/in/moise-gui/']);
+                              openUrl('https://www.linkedin.com/in/moise-gui/');
                             },
                             icon: SvgPicture.asset("assets/icons/linkedin.svg"),
                           ),
                           IconButton(
                             onPressed: () {
-                              js.context.callMethod(
-                                  'open', ['https://github.com/MoiseGui']);
+//                              js.context.callMethod(
+//                                  'open', ['https://github.com/MoiseGui']);
+                              openUrl('https://github.com/MoiseGui');
                             },
                             icon: SvgPicture.asset("assets/icons/github.svg"),
                           ),
                           IconButton(
                             onPressed: () {
-                              js.context.callMethod(
-                                  'open', ['https://twitter.com/gui_moise']);
+//                              js.context.callMethod(
+//                                  'open', ['https://twitter.com/gui_moise']);
+                            openUrl('https://twitter.com/gui_moise');
                             },
                             icon: SvgPicture.asset("assets/icons/twitter.svg"),
                           ),

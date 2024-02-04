@@ -57,7 +57,7 @@ class SideMenu extends StatelessWidget {
                           children: [
                             new GestureDetector(
                               onTap: () {
-                                openUrl('https://drive.google.com/file/d/1WY6j8YPftLLGh70kAQi_c68NQLwLCt86/view?usp=sharing');
+                                openUrl('https://drive.google.com/file/d/1-3uOG3Mc4e4QsCcFUfRZxRX4MjV-FsiF/view?usp=sharing');
                               },
                               child: Text(
                                 "DOWNLOAD CV",

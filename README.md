@@ -10,3 +10,10 @@
 **Fonts**
 
 - Poppins [link](https://fonts.google.com/specimen/Poppins)
+
+## Deployment
+using firebase hosting
+```bash
+flutter build web
+firebase deploy
+```
